@@ -7,6 +7,8 @@ var select3 = "z";
 var zselecta = "a";
 var zselectb = "b";
 var zselectc = "c";
+//for next and previous
+var inum = 0;
 
 document.getElementById("b1").addEventListener("click",
 function(){
@@ -124,11 +126,75 @@ function(){
 
 document.getElementById("numin").addEventListener("change",
 function(){
-    if(numin.value<12 && numin.value>1){
+    if(numin.value<=12 && numin.value>=1){
         bgd.style.backgroundImage= "url('imgs/i"+numin.value+".jpg')";
-        console.log("yee");
     }
     else{
         alert("Doesn't Exist");
     }
+});
+
+document.getElementById("nextset").addEventListener("click",
+function(){
+
+
+  inum++;
+  console.log(inum);
+  channel1.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+  select1 = channel1.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+  inum++;
+  console.log(inum);
+  channel2.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+  select2 = channel2.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+  inum++;
+  console.log(inum);
+  channel3.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+  select3 = channel3.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+
+  if(inum >= 12){
+    inum = 0;
+  }
+  else {
+    return inum;
+  }
+});
+
+document.getElementById("prevset").addEventListener("click",
+function(){
+
+  if(inum == 0){
+    inum = 12;
+    console.log(inum);
+    channel3.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+    select3 = channel3.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+    inum--;
+    console.log(inum);
+    channel2.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+    select2 = channel2.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+    inum--;
+    console.log(inum);
+    channel1.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+    select1 = channel1.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+    inum--;
+  }
+  else {
+    console.log(inum);
+    channel3.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+    select3 = channel3.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+    inum--;
+    console.log(inum);
+    channel2.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+    select2 = channel2.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+    inum--;
+    console.log(inum);
+    channel1.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+    select1 = channel1.style.backgroundImage= "url('imgs/i"+inum+".jpg')";
+    inum--;
+  if(inum <= 0){
+    inum = 12;
+  }
+  else {
+    return inum;
+  }
+  }
 });
