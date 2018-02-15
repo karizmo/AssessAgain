@@ -1,0 +1,37 @@
+#menu {
+    position: fixed;
+    left: -110px;
+    top: 50px;
+    width: 100px;
+    padding: 5px;
+    background-color:aquamarine;
+}
+
+#mbg {
+    width: 100%;
+}
+#res {
+    width: 100%;
+}
+#hidea {
+    width: 100%;
+}
+#showa {
+    width: 100%;
+}
+#op {
+    position: absolute;
+    width: 50px;
+    right: -50px;
+    top: 0px;
+}
+#cl {
+    position: absolute;
+    width: 50px;
+    right: -50px;
+    bottom: 0px;
+}
+
+#numin {
+    width: 50px;
+}
